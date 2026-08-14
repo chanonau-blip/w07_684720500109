@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>tialwind Interactive Hover</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="container h-screen flex justify-center items-center">
+        <img src="https://i.pravatar.cc//150?imd=1" alt="avatar" class="rounded-full w-24 h-24 ring-2 ring-white transition-all duration-300 hover:ring-4 hover:ring-green-500 hover:scale-110"/>
+        <img src="https://i.pravatar.cc//150?imd=2" alt="avatar" class="rounded-full w-24 h-24 ring-2 ring-white transition-all duration-300 hover:ring-4 hover:ring-green-500 hover:scale-110"/>
+        <img src="https://i.pravatar.cc//150?imd=3" alt="avatar" class="rounded-full w-24 h-24 ring-2 ring-white transition-all duration-300 hover:ring-4 hover:ring-green-500 hover:scale-110"/>
+        <img src="https://i.pravatar.cc//150?imd=4" alt="avatar" class="rounded-full w-24 h-24 ring-2 ring-white transition-all duration-300 hover:ring-4 hover:ring-green-500 hover:scale-110"/>
+    </div>
+    <!-- รายงานผลการทดลอง:การจัดวางรูปซ้อนกัน (Avatar Group): ใช้ class -space-x-5 ในตัวแม่เพื่อดึงให้รูปโปรไฟล์ทรงกลม (rounded-full) ทั้ง 4 รูปขยับมาซ้อนทับเหลื่อมกันในแนวราบ การตัดเส้นขอบ: การใส่ ring-2 ring-white 
+        ช่วยสร้างเส้นขอบสีขาวกั้นระหว่างรูป ทำให้แต่ละรูปแยกออกจากกันชัดเจนแม้จะวางซ้อนกันการทำ Interactive Hover: เมื่อเมาส์ชี้ที่รูปใด รูปนั้นจะขยายใหญ่ขึ้น (hover:scale-110) และเส้นขอบจะเปลี่ยนเป็นสีเขียวที่มีขนาดหนาขึ้น (hover:ring-4 hover:ring-green-500) 
+        โดยใช้เวลาเปลี่ยนผ่าน 0.3 วินาที (duration-300) -->
+</body>
+</html>

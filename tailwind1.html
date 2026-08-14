@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W07_Tailwind_UI</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="container h-screen flex justify-center items-center">
+        <p class="text-[200px] font-bold bg-[url(https://picsum.photos/1024/300?random=10)] w-[1500px] h-[300px] m-5 bg-clip-text text-transparent drop-shadow-xl drop-shadow-gray-500 transiltion-transform hover:scale-110 hover:-translate-y-[100px]">HELLO CT</p>
+    </div>
+    <!-- รายงานผลการทดลอง:การสร้างเอฟเฟกต์รูปภาพในตัวหนังสือ (Text Clipping): การใช้ class bg-clip-text ร่วมกับ text-transparent และการดึงรูปภาพพื้นหลังผ่าน bg-[url(...)] ทำให้ภาพพื้นหลังถูกตัดขอบให้อยู่เฉพาะภายในข้อความ "HELLO CT" การใส่เงาและความสวยงาม: การกำหนด drop-shadow-xl ช่วยเพิ่มมิติให้ตัวอักษรลอยออกมาจากพื้นหลังการตอบสนองเมื่อ Hover: เมื่อนำเมาส์ไปชี้ ตัวอักษรจะขยายใหญ่ขึ้น 10% (hover:scale-110) พร้อมเลื่อนตำแหน่งขึ้นด้านบน 100px (hover:-translate-y-[100px]) อย่างนุ่มนวลด้วย transition-transform -->
+</body>
+</html>

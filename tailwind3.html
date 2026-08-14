@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tialwind nimate-ping</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="relative w-24 h-24 bg-gray-100 mt-5 justify-self-center">
+        <img src="https://i.pravatar.cc/150?img=2" alt="avatar" class="rounded-full w-24 h-24 ring-2 ring-green-500"/>
+        <div class="rounded-full bg-green-500 w-[32px] h-[32px] absolute top-0 right-0 animate-ping"></div>
+    </div>
+    <!--  รายงานผลการทดลอง:การอ้างอิงพิกัดตำแหน่ง (Relative / Absolute Position): สั่งให้กล่องหลักเป็น relative 
+        เพื่อให้จุดการแจ้งเตือนด้านในที่เป็น absolute สามารถใช้อ้างอิงพิกัดมุมบนขวา (top-0 right-0) ได้อย่างแม่นยำ การสร้างเอฟเฟกต์ไฟกระพริบ 
+        (Notification Ping): แท็ก div วงกลมสีเขียวขนาด 32px ที่ถูกตั้งค่าด้วย class animate-ping จะสร้างแอนิเมชั่นขยายขนาดและค่อยๆ จางหายไปแบบวนลูป 
+        (Radar/Ping Effect) ซึ่งนิยมใช้เป็นสัญลักษณ์แสดงสถานะออนไลน์หรือการแจ้งเตือนใหม่ -->
+</body>
+</html>
