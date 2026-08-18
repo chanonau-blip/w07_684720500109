@@ -6,17 +6,22 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <div></div>
-    <div class="justify-self-center drop-shadow-xl">
-        <!-- 1. ส่วนรับค่าและแสดงผลใน HTML -->
-        <h2 class="text-center text-gray-800 font-bold py-2">โปรแกรมคำนวณหาค่าดัชนีมวลกาย (BMI)</h2>
-        <input class="" type="number" id="weightInput" placeholder="น้ำหนัก (kg)">
-        <input class="" type="number" id="heightInput" placeholder="ส่วนสูง (cm)">
-        <button onclick="displayBMI()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">คำนวณ</button>
-        
-        <h3 id="bmiResult"></h3>
-        <p id="statusResult"></p>
-        <img id="bmiImage" src="" alt="" style="width:150px;">
+    <div class="relative min-h-screen bg-blue-50 text-center mx-auto justify-self-center py-4">
+        <div class="drop-shadow-xl space-y-4">
+            <h2 class="text-xl text-center text-purple-950 font-bold">โปรแกรมคำนวณหาค่าดัชนีมวลกาย (BMI)</h2>
+            <div class="h-[2px] w-64 mx-auto bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 rounded-full"></div>
+            <h2 class="text-purple-950 text-sm font-bold py-2 rounded-full bg-blue-200 w-fit  mx-auto px-4">Calculator CT</h2>
+            <div class="w-xl rounded-lg overflow-hidden">
+                <img class="object-cover" src="https://www.masterpiecehospital.com/wp-content/uploads/2025/12/BMI-01-scaled.webp"/>
+            </div>
+            <input class="" type="number" id="weightInput" placeholder="น้ำหนัก (kg)">
+            <input class="" type="number" id="heightInput" placeholder="ส่วนสูง (cm)">
+            <button onclick="displayBMI()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">คำนวณ</button>
+            
+            <h3 id="bmiResult"></h3>
+            <p id="statusResult"></p>
+            <img id="bmiImage" src="" alt="" style="width:150px;">
+        </div>
     </div>
     <script>
         function CalculateBMI(weight, heightinCM){
