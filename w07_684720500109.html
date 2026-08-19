@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document tailwindcss&js</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="container h-screen flex justify-center items-center">
+        <p class="text-[200px] font-bold bg-[url(https://picsum.photos/1024/300?random=10)] w-[1500px] h-[300px] m-5 bg-clip-text text-transparent drop-shadow-xl drop-shadow-gray-500 transition-transform hover:scale-110 hover:-translate-y-[100px]">HELLO CT</p>
+    </div>
+    <!-- รายงานผลการทดลอง:การสร้างเอฟเฟกต์รูปภาพในตัวหนังสือ (Text Clipping): การใช้ class bg-clip-text ร่วมกับ text-transparent และการดึงรูปภาพพื้นหลังผ่าน bg-[url(...)] ทำให้ภาพพื้นหลังถูกตัดขอบให้อยู่เฉพาะภายในข้อความ "HELLO CT" การใส่เงาและความสวยงาม: การกำหนด drop-shadow-xl ช่วยเพิ่มมิติให้ตัวอักษรลอยออกมาจากพื้นหลังการตอบสนองเมื่อ Hover: เมื่อนำเมาส์ไปชี้ ตัวอักษรจะขยายใหญ่ขึ้น 10% (hover:scale-110) พร้อมเลื่อนตำแหน่งขึ้นด้านบน 100px (hover:-translate-y-[100px]) อย่างนุ่มนวลด้วย transition-transform -->
+    <div class="container h-screen flex justify-center items-center">
+        <img src="https://i.pravatar.cc//150?imd=1" alt="avatar" class="rounded-full w-24 h-24 ring-2 ring-white transition-all duration-300 hover:ring-4 hover:ring-green-500 hover:scale-110"/>
+        <img src="https://i.pravatar.cc//150?imd=2" alt="avatar" class="rounded-full w-24 h-24 ring-2 ring-white transition-all duration-300 hover:ring-4 hover:ring-green-500 hover:scale-110"/>
+        <img src="https://i.pravatar.cc//150?imd=3" alt="avatar" class="rounded-full w-24 h-24 ring-2 ring-white transition-all duration-300 hover:ring-4 hover:ring-green-500 hover:scale-110"/>
+        <img src="https://i.pravatar.cc//150?imd=4" alt="avatar" class="rounded-full w-24 h-24 ring-2 ring-white transition-all duration-300 hover:ring-4 hover:ring-green-500 hover:scale-110"/>
+    </div>
+    <!-- รายงานผลการทดลอง:การจัดวางรูปซ้อนกัน (Avatar Group): ใช้ class -space-x-5 ในตัวแม่เพื่อดึงให้รูปโปรไฟล์ทรงกลม (rounded-full) ทั้ง 4 รูปขยับมาซ้อนทับเหลื่อมกันในแนวราบ การตัดเส้นขอบ: การใส่ ring-2 ring-white 
+        ช่วยสร้างเส้นขอบสีขาวกั้นระหว่างรูป ทำให้แต่ละรูปแยกออกจากกันชัดเจนแม้จะวางซ้อนกันการทำ Interactive Hover: เมื่อเมาส์ชี้ที่รูปใด รูปนั้นจะขยายใหญ่ขึ้น (hover:scale-110) และเส้นขอบจะเปลี่ยนเป็นสีเขียวที่มีขนาดหนาขึ้น (hover:ring-4 hover:ring-green-500) 
+        โดยใช้เวลาเปลี่ยนผ่าน 0.3 วินาที (duration-300) -->
+
+    <div class="relative w-24 h-24 bg-gray-100 mt-5 justify-self-center">
+        <img src="https://i.pravatar.cc/150?img=2" alt="avatar" class="rounded-full w-24 h-24 ring-2 ring-green-500"/>
+        <div class="rounded-full bg-green-500 w-[32px] h-[32px] absolute top-0 right-0 animate-ping"></div>
+    </div> <br> <br>
+    <!--  รายงานผลการทดลอง:การอ้างอิงพิกัดตำแหน่ง (Relative / Absolute Position): สั่งให้กล่องหลักเป็น relative 
+        เพื่อให้จุดการแจ้งเตือนด้านในที่เป็น absolute สามารถใช้อ้างอิงพิกัดมุมบนขวา (top-0 right-0) ได้อย่างแม่นยำ การสร้างเอฟเฟกต์ไฟกระพริบ 
+        (Notification Ping): แท็ก div วงกลมสีเขียวขนาด 32px ที่ถูกตั้งค่าด้วย class animate-ping จะสร้างแอนิเมชั่นขยายขนาดและค่อยๆ จางหายไปแบบวนลูป 
+        (Radar/Ping Effect) ซึ่งนิยมใช้เป็นสัญลักษณ์แสดงสถานะออนไลน์หรือการแจ้งเตือนใหม่ -->
+        <!-- <div class="container justify-center items-center p-4">
+        <img class="justify-self-center h-auto w-120" src="https://images.unsplash.com/photo-1617606002806-94e279c22567?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="CONVERSE Sneakers" />
+        <div class="grid grid-cols-3 gap-6 p-2">
+            <div></div>
+            <div class=""><p class="font-bold text-gray-900 text-xl">CONVERSE Sneakers</p></div>
+            <div class=""><p class=""></p></div>
+            <div class=""><p class=""></p></div>
+            <div class=""><p class="font-bold text-gray-600 text-xl">High Top (Lemon Yellow)</p></div>
+            <div class=""><p class=""></p></div>
+            <div class=""><p class=""></p></div>
+            <div class=""><p class="font-bold text-gray-950 text-xl">$60</p></div>
+            <div class=""><p class=""></p></div>
+            <div class=""><p class=""></p></div>
+            <div class=""><span class="rounded-full bg-green-500 w-[30px] h-[32px] absolute"></span></div>
+        </div>
+    </div> -->
+
+
+        <div class="max-w-sm rounded-xl overflow-hidden shadow-lg justify-self-center">
+            <img class="w-full" src="https://images.unsplash.com/photo-1617606002806-94e279c22567?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sunset in the mountains">
+            <div class="px-4 py-4">
+                <div class="font-bold text-xl text-gray-700 mb-2">CONVERSE Sneakers</div>
+                <p class="font-semibold text-gray-500 text-lg">High Top (Lemon Yellow)</p>
+                <p class="font-bold text-gray-950 text-lg py-2">$60</p>
+                <span class="rounded-full bg-green-500 w-[16px] h-[16px] inline-block"></span>
+                <span class="rounded-full bg-red-500 w-[16px] h-[16px] inline-block"></span>
+                <span class="rounded-full bg-blue-500 w-[16px] h-[16px] inline-block"></span>
+                <span class="rounded-full bg-gray-500 w-[16px] h-[16px] inline-block"></span>
+            </div>
+            <div class="px-4 pt-4 pb-2">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-950 mr-2 mb-2">ADD to Cart</span>
+                <span class="inline-block rounded-full px-3 py-1 text-xl font-semibold text-gray-950 ml-50 mb-2">+</span>
+            </div>
+        </div>
+        <br>
+        <br>
+    <div class="relative min-h-screen bg-blue-50 text-center mx-auto justify-self-center py-4 px-4">
+        <div class="max-w-4xl space-y-3 mx-auto">
+            <h2 class="text-xl text-center text-purple-950 font-bold">โปรแกรมคำนวณหาค่าดัชนีมวลกาย (BMI)</h2>
+            <div class="h-[2px] w-64 mx-auto bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 rounded-full"></div>            
+            <h2 class="text-purple-950 text-sm font-bold py-2 rounded-full bg-blue-200 w-fit  mx-auto px-4">Calculator CT</h2>
+            <div class="flex justify-self-center w-2xl rounded-lg overflow-hidden">
+                <img class="object-cover" src="https://www.masterpiecehospital.com/wp-content/uploads/2025/12/BMI-01-scaled.webp"/>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div class="bg-white p-6 rounded-2xl space-y-4">
+                    <div class="relative border border-gray-300 rounded-xl p-2 focus-within:border-blue-500">
+                        <label class="absolute -top-3 left-3 bg-white px-1 text-gray-500">น้ำหนัก</label>
+                        <div class="flex justify-between items-center">
+                            <input class="w-full outline-none text-gray-700 text-xs" type="number" id="weightInput" placeholder="เช่น 60">
+                            <span class="text-gray-400 text-sm pl-2">กิโลกรัม</span>
+                        </div>
+                    </div>
+                    <div class="relative border border-gray-300 rounded-xl p-3 focus-within:border-blue-500">
+                        <label class="absolute -top-3 left-3 bg-white px-1 text-gray-500">ส่วนสูง</label>
+                        <div class="flex justify-between items-center">
+                            <input class="w-full text-xs text-gray-700 outline-none" type="number" id="heightInput" placeholder="เช่น 170">
+                            <span class="text-gray-400 text-sm pl-2">เซนติเมตร</span>
+                        </div>
+                    </div>
+                    <button onclick="displayBMI()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl shadow-md transition-colors">คำนวณ BMI</button>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-center items-center text-center space-y-3">
+                    <p class="text-gray-400 font-medium">ค่า BMI ของคุณ :</p>
+                    <h1 id="bmiResult" class="text-xl font-extrabold text-blue-400"></h1>
+                    <p id="statusResult" class="text-gray-400 text-sm py-1 rounded-full">กรอกน้ำหนักและส่วนสูงเพื่อคำนวณค่าดัชนีมวลกาย</p>
+                    <img id="bmiImage" class="w-36 rounded-lg mt-2 hidden" src="" alt="เกณฑ์ bmi">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function CalculateBMI(weight, heightinCM){
+            const heightinM = heightinCM / 100;
+            const bmi=weight/(heightinM*heightinM)
+
+            let status ="";
+
+            if(bmi < 18.5){
+                status = "น้ำหนักน้อยกว่าเกณฑ์(ผอม)";
+            }else if (bmi >= 18.5 && bmi <23){
+                status = "น้ำหนักปกติ";
+            }else if (bmi >= 23 && bmi <25){
+                status = "ท้วม/น้ำหนักเกิน";
+            }else if (bmi >= 25 && bmi <30){
+                status = "อ้วนระดับ 1";
+            }else {
+                status = "อ้วนระดับ 2 (อ้วนมาก)";
+            }
+
+            return {
+                bmiValue:bmi.toFixed(2),
+                category:status,
+            };
+            }
+
+            function displayBMI() {
+                const w = document.getElementById('weightInput').value;
+                const h = document.getElementById('heightInput').value;
+
+                if(w > 0 && h > 0) {
+                    const result = CalculateBMI(w,h);
+                    document.getElementById('bmiResult').innerText = result.bmiValue;
+                    document.getElementById('statusResult').innerText = result.category;
+                }
+            }
+    </script>
+
+        <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 my-8">
+        <div class="bg-purple-300 text-white px-6 py-4 rounded-tl-3xl rounded-br-3xl inline-block font-bold text-xl md:text-2xl italic shadow-sm">
+            สินเชื่อรถยนต์ - คำนวณการผ่อนชำระต่อเดือน
+        </div>
+
+        <div class="p-6 md:p-8 space-y-6">
+            <p class="text-gray-400 text-sm font-medium">กรุณาใส่ข้อมูลตามจริงเพื่อการคำนวณที่แม่นยำขึ้น</p>
+
+            <div class="space-y-4">
+                
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-2">
+                    <label class="text-gray-700 font-bold mt-2">รูปแบบการผ่อนชำระ</label>
+                    <div class="w-full md:w-80 space-y-1">
+                        <div class="flex border border-blue-300 rounded-full overflow-hidden">
+                            <select id="carPaymentType" class="w-full px-4 py-2 text-right outline-none font-bold text-gray-700 bg-white">
+                                <option value="normal">แบบปกติ</option>
+                            </select>
+                        </div>
+                        <p class="text-xs text-gray-500 font-medium px-2">
+                            <span class="font-bold text-gray-700">แบบปกติ</span> – ส่งค่างวดเท่ากันทุกงวดในแต่ละเดือนตลอดระยะเวลาสัญญา
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                    <label class="text-gray-700 font-bold">ราคารถยนต์</label>
+                    <div class="flex border border-blue-300 rounded-full overflow-hidden w-full md:w-80">
+                        <input type="number" id="carPrice" placeholder="" oninput="updateCarDownAmount()" class="w-full px-4 py-2 text-right outline-none font-bold text-gray-700">
+                        <span class="bg-blue-300 text-white px-4 py-2 text-sm flex items-center font-bold">บาท</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                    <label class="text-gray-700 font-bold">เงินดาวน์ (%)</label>
+                    <div class="flex border border-blue-300 rounded-full overflow-hidden w-full md:w-80">
+                        <input type="number" id="carDownPercent" placeholder="" oninput="updateCarDownAmount()" class="w-full px-4 py-2 text-right outline-none font-bold text-gray-700">
+                        <span class="bg-blue-300 text-white px-4 py-2 text-sm flex items-center font-bold">%</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                    <label class="text-gray-700 font-bold">เงินดาวน์ (บาท)</label>
+                    <div class="flex border border-blue-300 rounded-full overflow-hidden w-full md:w-80 bg-gray-50">
+                        <input type="text" id="carDownAmountText" readonly placeholder="" class="w-full px-4 py-2 text-right outline-none font-bold text-gray-700 bg-transparent">
+                        <span class="bg-blue-300 text-white px-4 py-2 text-sm flex items-center font-bold">บาท</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                    <label class="text-gray-700 font-bold">ระยะเวลาผ่อนชำระ</label>
+                    <div class="flex border border-blue-300 rounded-full overflow-hidden w-full md:w-80">
+                        <select id="carMonths" class="w-full px-4 py-2 text-right outline-none font-bold text-gray-700 bg-white">
+                            <option value="" disabled selected hidden>เลือกระยะเวลาผ่อนชำระ</option>
+                            <option value="12">12 เดือน</option>
+                            <option value="24">24 เดือน</option>
+                            <option value="36">36 เดือน</option>
+                            <option value="48">48 เดือน</option>
+                            <option value="60">60 เดือน</option>
+                            <option value="72">72 เดือน</option>
+                            <option value="84">84 เดือน</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                    <label class="text-gray-700 font-bold">อัตราดอกเบี้ยต่อปี</label>
+                    <div class="flex border border-blue-300 rounded-full overflow-hidden w-full md:w-80">
+                        <input type="number" id="carInterestRate" step="0.1" placeholder="" class="w-full px-4 py-2 text-right outline-none font-bold text-gray-700">
+                        <span class="bg-blue-300 text-white px-4 py-2 text-sm flex items-center font-bold">%</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-4 pt-4">
+                <button onclick="resetCarForm()" class="w-full md:w-1/2 bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 rounded-full transition-colors">
+                    ตั้งค่าการคำนวณใหม่
+                </button>
+                <button onclick="calculateCarLoan()" class="w-full md:w-1/2 bg-purple-300 hover:bg-purple-400 text-white font-bold py-3 rounded-full transition-colors shadow-md">
+                    คำนวณ
+                </button>
+            </div>
+
+            <div id="carResultSection" class="hidden pt-2">
+                <hr class="border-gray-200 my-6">
+                <h3 class="text-purple-900 font-extrabold text-xl mb-4">ผลการคำนวณ</h3>
+                <div class="space-y-4">
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full border border-blue-300 flex items-center justify-center text-blue-400">
+                                🚗
+                            </div>
+                            <span class="font-bold text-gray-700">ยอดจัด</span>
+                        </div>
+                        <div class="text-right">
+                            <span id="carLoanResult" class="text-xl font-extrabold text-gray-800">0</span>
+                            <span class="text-gray-600 font-bold ml-2">บาท</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full border border-blue-300 flex items-center justify-center text-blue-400">
+                                💳
+                            </div>
+                            <span class="font-bold text-gray-700">ค่างวดต่อเดือน</span>
+                        </div>
+                        <div class="text-right">
+                            <span id="carInstallmentResult" class="text-xl font-extrabold text-purple-900">0</span>
+                            <span class="text-gray-600 font-bold ml-2">บาท</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function updateCarDownAmount() {
+            const price = parseFloat(document.getElementById('carPrice').value) || 0;
+            const percent = parseFloat(document.getElementById('carDownPercent').value) || 0;
+            
+            if(price > 0 && percent > 0) {
+                const downAmount = price * (percent / 100);
+                document.getElementById('carDownAmountText').value = downAmount.toLocaleString();
+            } else {
+                document.getElementById('carDownAmountText').value = "";
+            }
+        }
+
+        function calculateCarLoan() {
+            const price = parseFloat(document.getElementById('carPrice').value) || 0;
+            const percent = parseFloat(document.getElementById('carDownPercent').value) || 0;
+            const months = parseInt(document.getElementById('carMonths').value) || 0;
+            const rate = parseFloat(document.getElementById('carInterestRate').value) || 0;
+
+            if(price <= 0 || months <= 0) {
+                alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+                return;
+            }
+
+            const downAmount = price * (percent / 100);
+            const loanAmount = price - downAmount;
+
+            const years = months / 12;
+            const totalInterest = loanAmount * (rate / 100) * years;
+            const totalPayment = loanAmount + totalInterest;
+
+            const monthlyInstallment = totalPayment / months;
+
+            document.getElementById('carLoanResult').innerText = Math.round(loanAmount).toLocaleString();
+            document.getElementById('carInstallmentResult').innerText = Math.round(monthlyInstallment).toLocaleString();
+            
+            document.getElementById('carResultSection').classList.remove('hidden');
+        }
+
+        function resetCarForm() {
+            document.getElementById('carPrice').value = "";
+            document.getElementById('carDownPercent').value = "";
+            document.getElementById('carDownAmountText').value = "";
+            document.getElementById('carMonths').value = "";
+            document.getElementById('carInterestRate').value = "";
+            
+            document.getElementById('carResultSection').classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>
