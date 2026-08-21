@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฝึกหัดที่ 5 - Google Fonts & Icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center; 
+            padding-left: 20px;
+        }
+
+
+        .sidebar-widget {
+            display: flex;
+            background-color: #e2e0f9; 
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-title {
+            background-color: #5555ff; 
+            color: #ffffff;
+            padding: 20px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            writing-mode: vertical-rl; 
+            transform: rotate(180deg);  
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .sidebar-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px 15px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-item {
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-item:hover {
+            transform: scale(1.15);
+        }
+
+        .fa-infinity {
+            color: #0066ff;
+        }
+
+        .fa-line {
+            color: #00c300;
+        }
+
+        .fa-instagram {
+            color: #d62976;
+        }
+
+        .fa-whatsapp {
+            color: #25d366;
+        }
+
+        .fa-x-twitter {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar-widget">
+        <div class="sidebar-title">
+            เทคโนโลยีคอมพิวเตอร์ มรม.
+        </div>
+
+        <div class="sidebar-icons">
+            <div class="icon-item"><i class="fa-solid fa-infinity"></i></div>
+            <div class="icon-item"><i class="fa-brands fa-line"></i></div>
+            <div class="icon-item"><i class="fa-brands fa-instagram"></i></div>
+            <div class="icon-item"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="icon-item"><i class="fa-brands fa-x-twitter"></i></div>
+        </div>
+    </div>   
+</body>
+</html>
