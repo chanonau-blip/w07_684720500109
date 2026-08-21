@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning CSS</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="bg-green-100 pb-30">
+    <div class="container-2xl w-full fixed bottom-0 flex justify-center items-center">
+        <div class="w-full max-w-3xl bg-green-200 rounded-t-2xl flex justify-around items-center">
+            <i class="lab la-facebook la-8x text-blue-500 transition-transform hover:scale-[1.7] hover:-translate-y-12 hover:cursor-pointer"></i>
+            <i class="lab la-youtube la-8x text-red-500 transition-transform hover:scale-[1.7] hover:-translate-y-12 hover:cursor-pointer"></i>
+            <i class="lab la-line la-8x text-green-600 transition-transform hover:scale-[1.7] hover:-translate-y-12 hover:cursor-pointer"></i>
+            <i class="lab la-instagram la-8x text-purple-500 transition-transform hover:scale-[1.7] hover:-translate-y-12 hover:cursor-pointer"></i>
+            <i class="lab la-whatsapp la-8x text-green-500 transition-transform hover:scale-[1.7] hover:-translate-y-12 hover:cursor-pointer"></i>
+            <i class="lab la-linkedin la-8x text-blue-500 transition-transform hover:scale-[1.7] hover:-translate-y-12 hover:cursor-pointer"></i>
+        </div>
+    </div>
+    
+    <div class="text-center p-6 space-y-4">
+        <div class="space-x-2">
+                <button onclick="createImage()" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-md transition">Create Image</button>
+                <button onclick="removeImage()" class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white font-bold rounded-md transition">Remove Image</button>
+        </div>
+
+        <div id="imageContainer" class="flex flex-wrap justify-center gap-4 mt-6"></div>
+    </div>
+
+    <script>
+        function createImage() {
+            const container = document.getElementById('imageContainer');
+            const newImg = document.createElement('img');
+
+            newImg.src = 'https://picsum.photos/200/150?random=' + Math.random();
+            newImg.className = 'rounded-lg shadow-md hover:scale-105 transition-transform duration-200';
+            
+            container.appendChild(newImg);
+        }
+
+        function removeImage() {
+            const container = document.getElementById('imageContainer');
+            if (container.lastElementChild) {
+                container.removeChild(container.lastElementChild);
+            }
+        }
+    </script>
+    <hr>
+
+    <div class="text-center p-6 space-y-4">
+        <div class="space-x-2">
+            <button id="btnHide" class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white font-bold rounded-md transition">Hide</button>
+            <button id="btnShow" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-md transition">Show</button>
+            <button id="btnToggle" class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white font-bold rounded-md transition">Toggle</button>
+            <button id="btnRight" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-md transition">Move Right</button>
+            <button id="btnLeft" class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white font-bold rounded-md transition">Move Left</button>
+            <button id="btnRect" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-md transition">Move Rectangle</button>
+        </div>
+        <div class="relative h-36 mt-4 p-4">
+            <img id="myImage" src="https://picsum.photos/200/150?random=?" class="absolute left-0 top-4 rounded-lg shadow-md w-48">
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#btnHide').click(function(){
+                $('#myImage').hide();
+            });
+
+            $('#btnShow').click(function(){
+                $('#myImage').show();
+            });
+
+            $('#btnToggle').click(function(){
+                $('#myImage').toggle();
+            });
+
+            $('#btnRight').click(function(){
+                $('#myImage').animate({ left: '+=100px'},300);
+            });
+
+            $('#btnLeft').click(function(){
+                $('#myImage').animate({ left:'-=100px'},300);
+            });
+
+            $('#btnRect').click(function(){
+                $('#myImage')
+                .animate({ left: '+=150px' }, 400)
+                .animate({ top: '+=100px' }, 400)
+                .animate({ left: '-=150px' }, 400)
+                .animate({ top: '-=100px' }, 400);
+            });
+        });
+    </script>
+
+    <div class="text-center p-10 space-y-4">
+        <div class="space-x-2">
+            <button id="btnJqCreate" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-md transition">Create Image (JQuery)</button>
+            <button id="btnJqRemove" class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white font-medium rounded-md transition">Remove Image (JQuery)</button>
+        </div>
+        <div id="jqImageContainer" class="flex flex-wrap justify-center gap-4 mt-6 min-h-[160px]"></div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#btnJqCreate').click(function(){
+                const randomUrl = 'https://picsum.photos/200/150?random='+ Math.random();
+                const newImg = $('<img>',{
+                    src: randomUrl,
+                    class: 'rounded-lg shadow-md hover:scale-105 transition-transform duration-200'
+                });
+
+                $('#jqImageContainer').append(newImg);
+            });
+
+            $('#btnJqRemove').click(function(){
+                $('#jqImageContainer img:last-child').remove();
+            });
+        });
+    </script>
+</body>
+</html>
